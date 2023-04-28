@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+{% for game in games %}
+
+<!-- HTML Card -->
+<div class="card">
+  <img class="card-img-top" src="{{ game.foto.url }}" alt="{{ game.nome }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ game.nome }}</h5>
+    <p class="card-text">{{ game.descrizione }}</p>
+  </div>
+  <div class="card-footer">
+    <h6 class="card-subtitle mb-2 text-muted">{{ game.prezzo }}€</h6>
+  </div>
+</div>
+
+{% endfor %}
+
+</div>
+{% endblock %}
+
